@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Create</title>
+</head>
+<body>
+<form class="code-container" onsubmit="return false;">
+    <label for="code_snippet">Code: </label>
+    <br>
+    <textarea id="code_snippet" placeholder="Write your code here" class="code"></textarea>
+    <br>
+    <button class="blue-button" id="send_snippet" type="submit" onclick="send()">Submit</button>
+</form>
+<label for="time_restriction">Time restriction: </label>
+<br>
+<input id="time_restriction" placeholder="0" type="text"/>
+<br>
+<label for="views_restriction">Views restriction: </label>
+<br>
+<input id="views_restriction" placeholder="0" type="text"/>
+
+
+<script>
+    function send() {
+        let object = {
+            "code": document.getElementById("code_snippet").value,
+            "time": document.getElementById("time_restriction").value,
+            "views": document.getElementById("views_restriction").value
+        };
+
+        let json = JSON.stringify(object);
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", '/api/code/new', false)
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+
+        if (xhr.status == 200) {
+            alert("Success!");
+        }
+    }
+</script>
+
+</body>
+</html>

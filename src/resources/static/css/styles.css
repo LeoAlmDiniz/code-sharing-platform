@@ -1,0 +1,63 @@
+.code-container {
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+}
+
+body{
+    background-color: rgb(17,16,15);
+}
+
+.code {
+    box-sizing: border-box;
+    border:1px solid #999999;
+    width:100%;
+    min-height: 60%;
+    margin:5px 0;
+    padding:3px;
+    background-color: rgb(27,26,25);
+    color: white;
+    font-size: large;
+}
+
+label{
+    color: white;
+    font-size: large;
+    margin-bottom: 5em;
+}
+
+.blue-button{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    box-sizing: border-box;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .1rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+    display: block;
+    align-self: center;
+    align-items: center;
+    margin: 1rem auto auto;
+}
+
+.blue-button:hover{
+    background-color: #115939;
+    border-color:  #115939;
+}
+
+.date{
+    color: #1de786;
+    font-family: monospace;
+    font-size: large;
+}
